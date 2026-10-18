@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alguém Especial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MÚSICA: Substitua o arquivo pelo nome da sua música mp3 -->
+    <audio id="musica" src="sua-musica.mp3" loop></audio>
+
+    <!-- TELA DE ABERTURA -->
+    <div id="tela-inicial">
+        <div class="conteudo-inicial">
+            <h1>Tenho algo para você...</h1>
+            <p>Clique no botão abaixo para entrar</p>
+            <button id="btn-entrar">Clique Aqui ✨</button>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (Fica escondido até ela clicar no botão) -->
+    <main id="conteudo-principal" class="escondido">
+        
+        <!-- SEÇÃO: MENSAGEM PRINCIPAL -->
+        <section class="secao-mensagem">
+            <h2>Para Você ❤️</h2>
+            <p class="texto-mensagem">
+                oiiii Sofia, irei falar pouco aqui, sou muito feliz d=de te ter e gosto muitoooo de vc, na vdd começei a gostar de vc no dia 03/02/2025, acredito que vc não acredite mas ali percebi que gostava bastante de vc, é ate um pouco vergonhoso a forma que meio que te pedi em namoro, mas era oq eu acreditava que seria diferente, mas quero te falar que eu gosto muitoooo de vc, beijinhos 
+            </p>
+        </section>
+
+        <!-- SEÇÃO: GALERIA DE FOTOS -->
+        <section class="secao-galeria">
+            <h3>Nossos Momentos</h3>
+            <div class="mural-fotos">
+                <!-- Foto 1 -->
+                <div class="foto-polaroid">
+                    <img src="IMG-20260101-WA0007.jpg" alt="Foto de vocês">
+                    <p class="legenda"></p>
+                </div>
+                <!-- Foto 2 -->
+                <div class="foto-polaroid">
+                    <img src="IMG-20260101-WA0016.jpg" alt="Foto de vocês">
+                    <p class="legenda"></p>
+                </div>
+                <!-- Foto 3 -->
+                <div class="foto-polaroid">
+                    <img src="IMG-20260503-WA0061.jpg" alt="Foto de vocês">
+                    <p class="legenda"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: MENSAGEM FINAL -->
+        <section class="secao-mensagem-final">
+            <p class="texto-final">Você é meu lugar favorito no mundo.❤️</p>
+        </section>
+
+    </main>
+
+    <script >
+        document.getElementById('btn-entrar').addEventListener('click', function() {
+    // 1. Toca a música
+    const musica = document.getElementById('musica');
+    musica.play().catch(error => {
+        console.log("O navegador bloqueou o som automático:", error);
+    });
+
+    // 2. Esconde a tela inicial com efeito de sumiço (fade-out)
+    const telaInicial = document.getElementById('tela-inicial');
+    telaInicial.style.opacity = '0';
+    
+    // 3. Remove a tela inicial do fluxo e mostra o conteúdo principal após o efeito acabar
+    setTimeout(() => {
+        telaInicial.classList.add('escondido');
+        document.getElementById('conteudo-principal').classList.remove('escondido');
+    }, 1000); // 1000 milissegundos = 1 segundo de transição
+});
+    </script>
+</body>
+</html>

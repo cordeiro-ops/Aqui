@@ -1,0 +1,151 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff5f5; /* Fundo rosa bem clarinho */
+    color: #4a4a4a;
+    overflow-x: hidden;
+}
+
+/* Tela de Abertura */
+#tela-inicial {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffb6c1; /* Rosa claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease, visibility 1s;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo-inicial h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.conteudo-inicial p {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+#btn-entrar {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #ff6b81;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btn-entrar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteúdo Principal */
+#conteudo-principal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.escondido {
+    display: none !important;
+}
+
+/* Estilização das Seções */
+section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.2);
+    text-align: center;
+}
+
+h2, h3 {
+    color: #ff6b81;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.texto-mensagem {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    white-space: pre-line; /* Mantém as quebras de linha que você digitar */
+}
+
+/* Mural de Fotos (Estilo Polaroid) */
+.mural-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.foto-polaroid {
+    background: #fff;
+    padding: 15px 15px 30px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: rotate(-2deg); /* Dá um efeito tortinho charmoso */
+    transition: transform 0.3s;
+    max-width: 250px;
+}
+
+.foto-polaroid:nth-child(even) {
+    transform: rotate(3deg); /* Alterna a rotação das fotos */
+}
+
+.foto-polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 10;
+}
+
+.foto-polaroid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz a foto se ajustar sem distorcer */
+    border-radius: 4px;
+}
+
+.legenda {
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo máquina de escrever */
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Seção Final */
+.secao-mensagem-final {
+    background: transparent;
+    box-shadow: none;
+}
+
+.texto-final {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #ff6b81;
+}
